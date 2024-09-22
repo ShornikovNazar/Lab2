@@ -1,16 +1,16 @@
 #include <iostream>
+#include <math.h>
 #include <windows.h>
 using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, ".1251");
     SetConsoleOutputCP(1251);
     int  o;
     double x, y;
     cout << "Введіть числа" << endl;
     cin >> x >> y;
-    cout << "Оберіть операцію з числами:\n" << "1. +\n" << "2. -\n" << "3. *\n" << "4. /\n\n";
+    cout << "Оберіть операцію з числами:\n" << "1. +\n" << "2. -\n" << "3. *\n" << "4. /\n"<<"5. x^y\n\n";
     cin >> o;
     switch (o)
     {
@@ -26,9 +26,11 @@ int main()
     case (4):
         cout << x << " / " << y << " = " << x / y << endl;
         break;
+    case (5):
+        cout << x << " ^ " << y << " = " << pow(x, y) << endl;
     default:
         cout << "Жодної операції не обрано. Помилка.";
         break;
     }
     return 0;
-};
+}
